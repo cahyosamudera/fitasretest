@@ -1,3 +1,10 @@
+# DevOps/SRE Engineer Take Home Test
+You need to:
+1. Clone this repo and update based on the Tasks section below
+2. Create a new repo for TF configuration part (plus point)
+3. Email us back with your repo URLs
+
+---
 # Quick Start
 
 This repo contains source code for simple express application that reads data from Postgres database.
@@ -17,14 +24,12 @@ This repo contains source code for simple express application that reads data fr
 1. Run app `npm start` 
 
 ## API Specification
+| API Route | Description |
+|---|---|
+| {base_url}/health | Return OK when the DB is connected and API is up and running |
+| {base_url}/users | Return all data in `users` table, populated during the migration |
 
-> /health
 
-Return OK when the DB is connected.
-
-> /users
-
-Return all data in `users` table, populated during the migration.
 
 ## Environment Variables
 The DB connection is maintained as environment variables.
@@ -35,6 +40,8 @@ database='database_name'
 host='127.0.0.1'
 port='5432'
 ```
+default API port: 3000
+
 
 ---
 
