@@ -8,9 +8,12 @@ const basename = path.basename(__filename);
 const config = require('dotenv').config().parsed
 
 const db = {};
-const sequelize = new Sequelize(config.database, config.username, config.password, {
-  host: config.host,
-  dialect: 'postgres',
+const sequelize = new Sequelize(
+  process.env.database || config.database,
+  process.env.username || config.username,
+  process.env.password || config.password, {
+    host: process.env.host || config.host,
+    dialect: 'postgres',
 });
 
 fs
